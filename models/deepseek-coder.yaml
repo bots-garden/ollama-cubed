@@ -1,0 +1,39 @@
+services:
+  download-deepseek-coder-01:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-01:11434/api/pull", "-d", '{"name": "deepseek-coder"}']
+    depends_on:
+      ollama-01:
+        condition: service_started
+  download-deepseek-coder-instruct-01:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-01:11434/api/pull", "-d", '{"name": "deepseek-coder:instruct"}']
+    depends_on:
+      ollama-01:
+        condition: service_started
+
+  download-deepseek-coder-02:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-02:11434/api/pull", "-d", '{"name": "deepseek-coder"}']
+    depends_on:
+      ollama-02:
+        condition: service_started
+  download-deepseek-coder-instruct-02:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-02:11434/api/pull", "-d", '{"name": "deepseek-coder:instruct"}']
+    depends_on:
+      ollama-02:
+        condition: service_started
+
+  download-deepseek-coder-03:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-03:11434/api/pull", "-d", '{"name": "deepseek-coder"}']
+    depends_on:
+      ollama-03:
+        condition: service_started
+  download-deepseek-coder-instruct-03:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-03:11434/api/pull", "-d", '{"name": "deepseek-coder:instruct"}']
+    depends_on:
+      ollama-03:
+        condition: service_started

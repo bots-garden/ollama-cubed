@@ -1,0 +1,8 @@
+services:
+  ollama-02:
+    #image: ollama/ollama:latest
+    image: ollama/ollama:0.1.27
+    volumes:
+      - ../ollama-02:/root/.ollama
+    ports:
+      - 11432:11434

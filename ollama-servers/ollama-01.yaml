@@ -1,0 +1,10 @@
+services:
+  # https://cheshirecat.ai/local-models-with-ollama/
+  ollama-01:
+    #image: ollama/ollama:latest
+    image: ollama/ollama:0.1.27
+    volumes:
+      - ../ollama-01:/root/.ollama
+    ports:
+      #- 11434:11434
+      - 11431:11434

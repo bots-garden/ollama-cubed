@@ -1,0 +1,22 @@
+services:
+  download-tinydolphin-01:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-01:11434/api/pull", "-d", '{"name": "tinydolphin"}']
+    depends_on:
+      ollama-01:
+        condition: service_started
+
+  download-tinydolphin-02:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-02:11434/api/pull", "-d", '{"name": "tinydolphin"}']
+    depends_on:
+      ollama-02:
+        condition: service_started
+
+  download-tinydolphin-03:
+    image: curlimages/curl:8.6.0
+    entrypoint: ["curl", "ollama-03:11434/api/pull", "-d", '{"name": "tinydolphin"}']
+    depends_on:
+      ollama-03:
+        condition: service_started
+

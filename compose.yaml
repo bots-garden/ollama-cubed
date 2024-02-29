@@ -1,0 +1,11 @@
+include: 
+  # Start Ollama
+  - ollama-servers/ollama-01.yaml
+  - ollama-servers/ollama-02.yaml
+  - ollama-servers/ollama-03.yaml
+
+  # Download LLMs
+  - models/tinydolphin.yaml
+  - models/tinyllama.yaml
+  - models/deepseek-coder.yaml
+  - models/gemma.yaml
